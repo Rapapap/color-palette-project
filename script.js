@@ -14,6 +14,8 @@ const generatePalette = () => {
         color.classList.add("color");
         color.innerHTML = `<div class="box" style="background: ${randomHex}"></div>
                             <span class="hex">${randomHex}</span>`;
+        //adding click event to li element to copy color code
+        color.addEventListener("click", () => copyColor(color, randomHex));
         container.appendChild(color);
     };
 };
