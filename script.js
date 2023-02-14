@@ -27,7 +27,7 @@ const copyColor = (elem, hexVal) => {
     navigator.clipboard.writeText(hexVal).then(() => {
         colorElement.innerText = "Text Copied";
         setTimeout (() => colorElement.innerText = hexVal, 1000);
-    })
+    }).catch(() => alert("Text can't be copied"));
 }
 
 refreshBtn.addEventListener("click", generatePalette);
